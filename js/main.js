@@ -47,4 +47,48 @@ $(document).ready(function() {
 
         $(this).toggleClass('open');
     });
+
+    $('.popular_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        variableWidth: true,
+        slidesToShow: 5,
+        arrows: false,
+        adaptiveHeight: true
+    });
+
+    $('.bestsellers_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        variableWidth: true,
+        slidesToShow: 5,
+        arrows: false,
+        adaptiveHeight: true
+    });
+
+    $('.materials_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        variableWidth: true,
+        slidesToShow: 3,
+        adaptiveHeight: true,
+        appendArrows: $('.materials_slider_arrows'),
+        prevArrow: '<button id="prev" type="button" class="btn"> <img src="images/arrow_prew.png"> </button>',
+        nextArrow: '<button id="next" type="button" class="btn"> <img src="images/arrow_next.png"> </button>'
+    });
+
+    $('.blog_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        variableWidth: true,
+        slidesToShow: 3,
+        adaptiveHeight: true,
+        appendArrows: $('.blog_slider_arrows'),
+        prevArrow: '<button id="prev" type="button" class="btn"> <img src="images/arrow_prew.png"> </button>',
+        nextArrow: '<button id="next" type="button" class="btn"> <img src="images/arrow_next.png"> </button>'
+    });
 });
