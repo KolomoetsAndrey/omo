@@ -186,4 +186,14 @@ $(document).ready(function() {
             }
         ]
     });
+
+    $('.text').filter(':odd').addClass('text_right').end()
+        .filter(':even').addClass('text_left');
+
+    $('.blog_articles_list li').slice(1, 4).show().css('display', 'flex');
+    $('.more').on('click', function (e) {
+        e.preventDefault();
+        $('.blog_articles_list li:hidden').slice(0, 3).fadeIn().css('display', 'flex');
+    });
+
 });
