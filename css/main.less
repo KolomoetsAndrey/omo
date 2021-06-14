@@ -429,6 +429,7 @@ input, button {
 
     .cart_block {
         display: flex;
+        position: relative;
 
         .user, .cart {
             background: transparent;
@@ -459,6 +460,133 @@ input, button {
                 border-radius: 100%;
                 font-size: 12px;
             }
+        }
+    }
+
+    .dropdown-menu {
+        display: block !important;
+        right: -50px !important;
+        top: 140% !important;
+        left: inherit !important;
+        width: 350px;
+        background: #FFFFFF !important;
+        border: 1px solid #4737FF !important;
+        border-radius: 13px !important;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.55s opacity, 0.55s visibility;
+        box-shadow: -2px 3px 5px #0000002b;
+
+        &::before {
+            display: block;
+            width: 16px;
+            height: 16px;
+            z-index: 1100;
+            content: "";
+            background-color: #FFFFFF;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -9px;
+            right: 65px;
+            border-top: 1px solid #4737FF;
+            border-left: 1px solid #4737FF;
+        }
+
+        .outcome {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+
+            .summ {
+                display: flex;
+                width: 50%;
+
+                .summ_title {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #000000;
+                }
+
+                .summ_text {
+                    margin-left: 5px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                    color: #4737FF;
+                }
+            }
+
+            .get_order {
+                width: 50%;
+                border: 1px solid #000000;
+                box-sizing: border-box;
+                border-radius: 19.5px;
+                background: #FFFFFF;
+                padding: 6px 10px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: #4737FF;
+            }
+        }
+    }
+
+    .dropdown-menu_items {
+
+        .cart_item {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cart_item_img {
+            width: 72px;
+            height: auto;
+            padding: 5px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .cart_item_name {
+            padding: 5px;
+        }
+
+        .cart_item_title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .cart_item_price {
+            padding: 5px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 20px;
+            color: #4737FF;
+            width: 30%;
+            text-align: right;
+        }
+
+        .quantity {
+            padding-top: 10px;
         }
     }
 
@@ -1036,6 +1164,108 @@ input, button {
             }
         }
     }
+
+    .card_title {
+        margin: 0 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 2px solid #C4C4C4;
+
+        .item_title {
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 17px;
+            color: #000000;
+        }
+
+        .sku {
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 17px;
+            color: #000000;
+            margin-bottom: 12px;
+            padding: 0;
+        }
+    }
+
+    .card_view {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 130px;
+        margin: 30px 0;
+
+        .gallery_row {
+            display: flex;
+            padding: 0;
+        }
+
+        .thumbnails {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin-right: 15px;
+            width: max-content;
+
+            li {
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 110px;
+            }
+        }
+
+        .main_img {
+            max-width: 480px;
+            width: 100%;
+        }
+    }
+}
+
+.star_rating {
+    .rating-group {
+        display: inline-flex;
+    }
+
+    .rating__icon {
+        pointer-events: none;
+    }
+
+    .rating__input {
+        position: absolute !important;
+        left: -9999px !important;
+    }
+
+    .rating__input--none {
+        display: none
+    }
+
+    .rating__label {
+        cursor: pointer;
+        padding: 0 0.1em;
+        font-size: 20px;
+    }
+
+    .rating__icon--star {
+        color: orange;
+    }
+
+    .rating__input:checked ~ .rating__label .rating__icon--star {
+        color: #ddd;
+    }
+
+    .rating-group:hover .rating__label .rating__icon--star {
+        color: orange;
+    }
+
+    .rating__input:hover ~ .rating__label .rating__icon--star {
+        color: #ddd;
+    }
 }
 
 .breadcrumb {
@@ -1046,11 +1276,12 @@ input, button {
         margin-right: 15px;
 
         &:first-child a {
-            pointer-events: none;
-            cursor: default;
+
         }
 
         &:last-child a {
+            pointer-events: none;
+            cursor: default;
             font-weight: 300;
         }
 
@@ -1068,7 +1299,7 @@ input, button {
             content: ">";
             font-size: 12px;
             right: -5px;
-            top: 1px;
+            top: 0;
         }
         
         &:last-child {
@@ -1467,71 +1698,71 @@ input, button {
         text-transform: uppercase;
         padding: 2px 5px;
     }
+}
 
-    .quantity {
-        display: flex;
+.quantity {
+    display: flex;
+    align-items: center;
+
+    input[type="number"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+        
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+        
+    .number-input {
+        display: inline-flex;
+    }
+        
+    .number-input,
+    .number-input * {
+        box-sizing: border-box;
+    }
+        
+    .number-input button {
+        outline:none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: none;
         align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        margin: 0;
+        position: relative;
+    }
+        
+    .number-input button:before,
+    .number-input button:after {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 2px;
+        background-color: #4737FF;
+        transform: translate(-50%, -50%);
+    }
 
-        input[type="number"] {
-            -webkit-appearance: textfield;
-            -moz-appearance: textfield;
-            appearance: textfield;
-        }
-            
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-        }
-            
-        .number-input {
-            display: inline-flex;
-        }
-            
-        .number-input,
-        .number-input * {
-            box-sizing: border-box;
-        }
-            
-        .number-input button {
-            outline:none;
-            -webkit-appearance: none;
-            background-color: transparent;
-            border: none;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            margin: 0;
-            position: relative;
-        }
-            
-        .number-input button:before,
-        .number-input button:after {
-            display: inline-block;
-            position: absolute;
-            content: '';
-            width: 8px;
-            height: 2px;
-            background-color: #4737FF;
-            transform: translate(-50%, -50%);
-        }
-
-        .number-input button.plus:after {
-            transform: translate(-50%, -50%) rotate(90deg);
-        }
-            
-        .number-input input[type=number] {
-            max-width: 35px;
-            padding: 5px;
-            border: solid #ddd;
-            border-width: 1px 1px;
-            font-size: 14px;
-            height: 20px;
-            font-weight: bold;
-            text-align: center;
-            border-radius: 50px;
-        }
+    .number-input button.plus:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+        
+    .number-input input[type=number] {
+        max-width: 35px;
+        padding: 5px;
+        border: solid #ddd;
+        border-width: 1px 1px;
+        font-size: 14px;
+        height: 20px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 50px;
     }
 }
 

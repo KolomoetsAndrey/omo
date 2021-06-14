@@ -1,15 +1,15 @@
 $(document).ready(function() {
 	$('#hamburger').click(function() {
 
-        $menuBlock = $('.menu_block');
+        $hamburgerBlock = $('.menu_block');
 
 		if ($(this).hasClass('open')) {
-            $menuBlock.css({"opacity": "0"});
-            $menuBlock.css({"visibility": "hidden"});
+            $hamburgerBlock.css({"opacity": "0"});
+            $hamburgerBlock.css({"visibility": "hidden"});
 		}
 		else {
-            $menuBlock.css({"opacity": "1"});
-            $menuBlock.css({"visibility": "visible"});
+            $hamburgerBlock.css({"opacity": "1"});
+            $hamburgerBlock.css({"visibility": "visible"});
 		}
 
 		$(this).toggleClass('open');
@@ -17,17 +17,17 @@ $(document).ready(function() {
 
     $('#navigation_menu').click(function() {
 
-        $menuBlock = $('.left_sidebar');
+        $navigationBlock = $('.left_sidebar');
 
 		if ($(this).hasClass('open')) {
-            $menuBlock.css({"opacity": "0"});
-            $menuBlock.css({"visibility": "hidden"});
-            $menuBlock.css({"width": "0"});
+            $navigationBlock.css({"opacity": "0"});
+            $navigationBlock.css({"visibility": "hidden"});
+            $navigationBlock.css({"width": "0"});
 		}
 		else {
-            $menuBlock.css({"opacity": "1"});
-            $menuBlock.css({"visibility": "visible"});
-            $menuBlock.css({"width": "300px"});
+            $navigationBlock.css({"opacity": "1"});
+            $navigationBlock.css({"visibility": "visible"});
+            $navigationBlock.css({"width": "300px"});
 		}
 
 		$(this).toggleClass('open');
@@ -51,19 +51,35 @@ $(document).ready(function() {
 
     $('.lang_block').click(function() {
 
-        $phonesBlock = $('.languages');
+        $langBlock = $('.languages');
 
 		if ($(this).hasClass('open')) {
-            $phonesBlock.css({"opacity": "0"});
-            $phonesBlock.css({"visibility": "hidden"});
+            $langBlock.css({"opacity": "0"});
+            $langBlock.css({"visibility": "hidden"});
 		}
 		else {
-            $phonesBlock.css({"opacity": "1"});
-            $phonesBlock.css({"visibility": "visible"});
+            $langBlock.css({"opacity": "1"});
+            $langBlock.css({"visibility": "visible"});
 		}
 
         $(this).toggleClass('open');
     });
+
+    $('#cart').click(function() {
+
+        $cartBlock = $('.dropdown-menu');
+
+		if ($(this).hasClass('open')) {
+            $cartBlock.css({"opacity": "0"});
+            $cartBlock.css({"visibility": "hidden"});
+		}
+		else {
+            $cartBlock.css({"opacity": "1"});
+            $cartBlock.css({"visibility": "visible"});
+		}
+
+		$(this).toggleClass('open');
+	});
 
     var sliderWidth = $('.right_sidebar').width();
     $('.index_slide_block').css("width", sliderWidth);
