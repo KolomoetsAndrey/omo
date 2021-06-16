@@ -935,6 +935,98 @@ button {
   line-height: 20px;
   color: #000000;
 }
+.content .page_content_img {
+  width: 100%;
+}
+.content .contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.content .contacts i {
+  margin-right: 5px;
+}
+.content .contacts .contact_block {
+  width: 30%;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+}
+.content .contacts .contact_block p {
+  padding: 0;
+}
+.content .contacts .contact_block ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.content .contacts .contact_block_city {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.content .contacts .contact_block_city li {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.content .contacts .contact_block_city li:first-child {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.content .contacts .contact_block_adress {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.content .contacts .contact_block_mail li,
+.content .contacts .contact_block_phone li {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.content .contacts .contact_block_time li {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.content .contacts .contact_block_time li:first-child {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.content .contacts .contact_web a {
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.content .contacts .contact_web p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.content .map_block {
+  margin-top: 30px;
+}
 .slick-dots {
   position: inherit;
   bottom: 0;
