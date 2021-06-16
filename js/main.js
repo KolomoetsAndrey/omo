@@ -81,6 +81,21 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 	});
 
+    var acc = $('.accordion');
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+    };
+
     var sliderWidth = $('.right_sidebar').width();
     $('.index_slide_block').css("width", sliderWidth);
 
@@ -141,6 +156,28 @@ $(document).ready(function() {
         speed: 300,
         variableWidth: true,
         slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    $('.special_offer_slider').slick({
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        infinite: true,
+        speed: 300,
+        variableWidth: true,
+        slidesToShow: 4,
         slidesToScroll: 1,
         arrows: false,
         adaptiveHeight: true,
