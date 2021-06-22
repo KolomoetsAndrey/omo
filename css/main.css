@@ -1735,6 +1735,58 @@ button {
   color: #645C5C;
   margin-bottom: 5px;
 }
+.wrapper .subtitle {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 17px;
+  color: #555555;
+  padding: 10px 130px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+.wrapper .pay_block {
+  margin-top: 40px;
+  padding: 0 130px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .pay_block .fa {
+  font-size: 75px;
+  margin-bottom: 15px;
+}
+.wrapper .pay_block .block_desc {
+  font-size: 22px;
+  line-height: 17px;
+  color: #555555;
+}
+.wrapper .pay_block span {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 17px;
+  color: #555555;
+}
+.wrapper .pay_block li {
+  text-align: center;
+}
+.wrapper .pay_block_info {
+  margin-top: 40px;
+  padding: 0 130px;
+  font-size: 18px;
+  line-height: 17px;
+}
+.wrapper .pay_block_info li {
+  margin-bottom: 10px;
+}
+.wrapper .pay_block_info .fa {
+  font-style: 25px;
+  margin-right: 10px;
+}
+.wrapper .blue {
+  color: #4737FF;
+  font-weight: 500;
+}
 .star_rating .rating-group {
   display: inline-flex;
 }
