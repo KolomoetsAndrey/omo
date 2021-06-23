@@ -127,6 +127,8 @@ $(document).ready(function() {
     };
 
     $('.popular_slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
         dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -149,6 +151,8 @@ $(document).ready(function() {
     });
 
     $('.bestsellers_slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
         dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -171,13 +175,15 @@ $(document).ready(function() {
     });
 
     $('.special_offer_slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
         dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         infinite: true,
         speed: 300,
         variableWidth: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         arrows: false,
         adaptiveHeight: true,
@@ -193,13 +199,14 @@ $(document).ready(function() {
     });
 
     $('.materials_slider').slick({
+        centerMode: true,
         dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         infinite: true,
         speed: 300,
         variableWidth: true,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         adaptiveHeight: true,
         appendArrows: $('.materials_slider_arrows'),
@@ -217,6 +224,7 @@ $(document).ready(function() {
     });
 
     $('.blog_slider').slick({
+        centerMode: true,
         dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
