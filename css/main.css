@@ -69,7 +69,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
+  position: sticky;
+  width: 100%;
+  height: 1200px;
+  top: 33px;
 }
 .logo_link {
   display: flex;
@@ -96,10 +99,6 @@ button {
 .catalogue li {
   margin-bottom: 25px;
 }
-.catalogue li:last-child {
-  padding-bottom: 30px;
-  border-bottom: 2px solid #C4C4C4;
-}
 .catalogue .catalogue_link {
   font-size: 18px;
   font-weight: bold;
@@ -109,6 +108,34 @@ button {
   text-decoration: none;
   color: #1434E1;
   opacity: 0.5;
+}
+.where_buy {
+  width: 100%;
+  color: #FFFFFF;
+  background: #c54d4e;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  border: none;
+}
+.prices {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+.prices li {
+  margin-bottom: 15px;
+}
+.prices li:last-child {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #C4C4C4;
+}
+.prices li .price_link {
+  font-size: 18px;
+  color: #000000;
 }
 .socials {
   list-style: none;
