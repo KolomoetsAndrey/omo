@@ -1116,6 +1116,67 @@ input, button {
         width: 100%;
     }
 
+    .services_desc {
+
+        .services_title {
+            padding: 30px;
+            font-size: 34px;
+            text-transform: uppercase;
+        }
+
+        .services_desc_text {
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .services_desc_block {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+
+            .services_desc_block_img {
+                width: 43%;
+            }
+
+            .services_desc_block_text {
+                width: 53%;
+            }
+
+            &:nth-child(odd) {
+                .services_desc_block_img {
+                    order: 0;
+                }
+
+                .services_desc_block_text {
+                    order: 1;
+                }
+            }
+
+            &:nth-child(even) {
+                .services_desc_block_img {
+                    order: 1;
+                }
+
+                .services_desc_block_text {
+                    order: 0;
+                }
+            }
+
+            h4 {
+                color: #8f8f8f;
+                text-transform: uppercase;
+                margin-top: 0;
+                font-size: 20px;
+            }
+
+            p {
+                padding: 0;
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+    }
+
     .contacts {
         display: flex;
         flex-wrap: wrap;
