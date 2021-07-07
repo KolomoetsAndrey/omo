@@ -66,9 +66,109 @@ input, button {
         flex-direction: column;
         align-items: center;
         position: sticky;
-        width: 100%;
+        width: inherit;
         height: 1200px;
         top: 33px;
+    }
+
+    .filter_btn {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        border: none;
+        background: transparent;
+    }
+
+    .filter_img {
+        width: 30px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .filter_block {
+        position: absolute;
+        width: 0;
+        top: 125px;
+        left: 0;
+        list-style: none;
+        padding: 0 30px;
+        margin-bottom: 20px;
+        background: @white;
+        visibility: hidden;
+        opacity: 0;
+        height: 100%;
+        z-index: 5000;
+        transition: .55s opacity, .55s visibility, .25s width;
+
+        .close_filter {
+            margin-left: auto;
+            display: block;
+            padding: 5px 15px;
+            border: 1px solid @black;
+            border-radius: 35px;
+        }
+    }
+
+    .filter_main_group {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        position: relative;
+        
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 31px;
+            width: 153px;
+            height: 2px;
+            display: block;
+            content: "";
+            background: #C4C4C4;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .filter_group {
+        overflow-y: scroll;
+        height: 120px;
+
+        span {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;   
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            
+            li {
+                margin: 5px 0;
+            }
+        }
+
+        input {
+            cursor: pointer;
+        }
+    }
+
+    .extra-controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 10px;
+
+        input {
+            width: 40%;
+            margin: 0 5px;
+        }
+    }
+
+    .range-slider {
+        margin-top: -10px;
     }
 }
 
@@ -2767,9 +2867,17 @@ input, button {
         height: 100vh;
         z-index: 1000;
         transition: .55s opacity, .55s visibility, .25s width;
+        overflow: scroll;
 
         .sidebar_block {
-            position: inherit;
+            position: sticky;
+            width: inherit;
+            height: 1200px;
+            top: 33px;
+        }
+
+        .filter_block {
+            height: 100%;
         }
     }
 

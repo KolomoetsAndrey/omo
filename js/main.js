@@ -33,6 +33,40 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 	});
 
+    $('#filter_btn').click(function() {
+
+        $filterBlock = $('.filter_block');
+
+		if ($(this).hasClass('open')) {
+            $filterBlock.css({"opacity": "0"});
+            $filterBlock.css({"visibility": "hidden"});
+            $filterBlock.css({"width": "0"});
+		}
+		else {
+            $filterBlock.css({"opacity": "1"});
+            $filterBlock.css({"visibility": "visible"});
+            $filterBlock.css({"width": "100%"});
+		}
+
+		$(this).toggleClass('open');
+	});
+
+    $('#close_filter').click(function() {
+
+        $filterBlock = $('.filter_block');
+
+		if ($filterBlock.css({"opacity": "1"})) {
+            $filterBlock.css({"opacity": "0"});
+            $filterBlock.css({"visibility": "hidden"});
+            $filterBlock.css({"width": "0"});
+		}
+		else {
+            $filterBlock.css({"opacity": "1"});
+            $filterBlock.css({"visibility": "visible"});
+            $filterBlock.css({"width": "100%"});
+		}
+    })
+
     $('.phone_block').click(function() {
 
         $phonesBlock = $('.phones');
@@ -256,5 +290,68 @@ $(document).ready(function() {
         e.preventDefault();
         $('.blog_articles_list li:hidden').slice(0, 3).fadeIn().css('display', 'flex');
     });
+
+    // Range Slider
+    var $range = $(".js-range-slider"),
+    $inputFrom = $(".js-input-from"),
+    $inputTo = $(".js-input-to"),
+    instance,
+    min = 0,
+    max = 10000,
+    from = 0,
+    to = 0;
+
+    $range.ionRangeSlider({
+        skin: "round",
+        hide_min_max: true,
+        hide_from_to: true,
+        type: "double",
+        min: min,
+        max: max,
+        from: 100,
+        to: 9000,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs (data) {
+        from = data.from;
+        to = data.to;
+        
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);	
+    }
+
+    $inputFrom.on("input", function () {
+        var val = $(this).prop("value");
+        
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+        
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+        
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+        
+        instance.update({
+            to: val
+        });
+    });
+    // End Range Slider
 
 });

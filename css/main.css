@@ -70,9 +70,94 @@ button {
   flex-direction: column;
   align-items: center;
   position: sticky;
-  width: 100%;
+  width: inherit;
   height: 1200px;
   top: 33px;
+}
+.left_sidebar .filter_btn {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+}
+.left_sidebar .filter_img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+.left_sidebar .filter_block {
+  position: absolute;
+  width: 0;
+  top: 125px;
+  left: 0;
+  list-style: none;
+  padding: 0 30px;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+  visibility: hidden;
+  opacity: 0;
+  height: 100%;
+  z-index: 5000;
+  transition: 0.55s opacity, 0.55s visibility, 0.25s width;
+}
+.left_sidebar .filter_block .close_filter {
+  margin-left: auto;
+  display: block;
+  padding: 5px 15px;
+  border: 1px solid #000000;
+  border-radius: 35px;
+}
+.left_sidebar .filter_main_group {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.left_sidebar .filter_main_group:after {
+  position: absolute;
+  bottom: 0;
+  left: 31px;
+  width: 153px;
+  height: 2px;
+  display: block;
+  content: "";
+  background: #C4C4C4;
+}
+.left_sidebar .filter_main_group:last-child {
+  border-bottom: none;
+}
+.left_sidebar .filter_group {
+  overflow-y: scroll;
+  height: 120px;
+}
+.left_sidebar .filter_group span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.left_sidebar .filter_group ul {
+  list-style: none;
+  padding: 0;
+}
+.left_sidebar .filter_group ul li {
+  margin: 5px 0;
+}
+.left_sidebar .filter_group input {
+  cursor: pointer;
+}
+.left_sidebar .extra-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.left_sidebar .extra-controls input {
+  width: 40%;
+  margin: 0 5px;
+}
+.left_sidebar .range-slider {
+  margin-top: -10px;
 }
 .logo_link {
   display: flex;
@@ -2338,9 +2423,16 @@ button {
     height: 100vh;
     z-index: 1000;
     transition: 0.55s opacity, 0.55s visibility, 0.25s width;
+    overflow: scroll;
   }
   .left_sidebar .sidebar_block {
-    position: inherit;
+    position: sticky;
+    width: inherit;
+    height: 1200px;
+    top: 33px;
+  }
+  .left_sidebar .filter_block {
+    height: 100%;
   }
   .header {
     padding: 33px 30px;
