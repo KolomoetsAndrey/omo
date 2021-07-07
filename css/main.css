@@ -411,9 +411,21 @@ button {
   background: transparent;
   border: none;
 }
-.header .cart_block .user img {
+.header .cart_block .user .user_img {
+  display: none;
   width: 35px;
   height: 35px;
+}
+.header .cart_block .user .user_text {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-right: 10px;
+}
+.header .cart_block .user .user_text:hover {
+  color: #1434E1;
 }
 .header .cart_block .cart {
   position: relative;
@@ -2340,6 +2352,12 @@ button {
   .header .navbar_block {
     display: flex;
     align-items: center;
+  }
+  .header .cart_block .user .user_img {
+    display: block;
+  }
+  .header .cart_block .user .user_text {
+    display: none;
   }
   .wrapper {
     margin-top: 75px;

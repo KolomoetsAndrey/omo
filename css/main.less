@@ -467,9 +467,23 @@ input, button {
         }
 
         .user {
-            img {
+            .user_img {
+                display: none;
                 width: 35px;
                 height: 35px;
+            }
+
+            .user_text {
+                display: block;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                margin-right: 10px;
+
+                &:hover {
+                    color: @blue;
+                }
             }
         }
 
@@ -2769,6 +2783,18 @@ input, button {
         .navbar_block {
             display: flex;
             align-items: center;
+        }
+
+        .cart_block {
+            .user {
+                .user_img {
+                    display: block;
+                }
+
+                .user_text {
+                    display: none;
+                }
+            }
         }
     }
 
