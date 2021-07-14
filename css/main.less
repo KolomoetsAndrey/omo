@@ -567,13 +567,18 @@ input, button {
         }
 
         .user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             .user_img {
-                display: none;
                 width: 35px;
                 height: 35px;
+                order: 1;
             }
 
             .user_text {
+                order: 0;
                 display: block;
                 font-style: normal;
                 font-weight: 500;
@@ -1579,7 +1584,7 @@ input, button {
                         color: #FFFFFF;
                         background: url(../images/slider_text_bg.png);
                         background-size: cover;
-
+                        text-transform: uppercase;
                     }
                 }
 
@@ -2976,7 +2981,30 @@ input, button {
 }
 
 @media (max-width: 1024px) {
+    .wrapper {
+        .index_slider {
+            .index_slider_wrapper {
+                .index_slide_block {
+                    .right_slide_side {
+                        .index_slide_img_text {
+                            position: relative;
+                            bottom: 240px;
+                            left: 0;
+                        }
 
+                        .index_slide_img_text {
+                            font-size: 18px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .index_category_block {
+            margin-top: -200px;
+        }
+    }
 }
 
 @media (max-width: 920px) {
@@ -3046,13 +3074,23 @@ input, button {
 
         .index_production_block {
             padding: 0 40px;
+
+            .production_text {
+                width: 100%;
+            }
+
+            .production_image {
+                width: 100%;
+                margin-top: 30px;
+            }
         }
 
         .index_subscribe_block {
             padding-right: 40px;
+            padding-left: 40px;
 
             .subscribe_images {
-                width: 50%;
+                width: 100%;
 
                 img {
                     top: 100px;
@@ -3060,7 +3098,8 @@ input, button {
             }
 
             .subscribe_text {
-                width: 45%;
+                width: 100%;
+                margin-top: 30px;
             }
         }
 
@@ -3075,15 +3114,101 @@ input, button {
 }
 
 @media (max-width: 800px) {
+    .wrapper {
+        .index_slider {
+            .index_slider_wrapper {
+                .index_slide_block {
+                    .index_slide_title {
+                        font-size: 18px;
+                        line-height: 36px;
+                        margin-bottom: 30px;
+                    }
 
+                    .index_slide_text {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+
+            .numbers {
+                bottom: 275px;
+            }
+        }
+    }
 }
 
 @media (max-width: 640px) {
+    .wrapper {
+        .index_slider {
+            .numbers {
+                bottom: 215px;
+            }
+        }
 
+        .index_about_block {
+            h3 {
+                font-size: 26px;
+            }
+        }
+
+        .index_block_title {
+            font-size: 18px;
+        }
+
+        .index_production_block {
+            .production_text {
+                h3 {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .index_subscribe_block {
+            .subscribe_text {
+                h3 {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .index_blog_block {
+            .blog_desc {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .footer {
+        .footer_menu_block {
+            flex-wrap: wrap;
+
+            .footer_logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .footer_widget {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
-
+    .wrapper {
+        .index_slider {
+            .index_slider_wrapper {
+                .index_slide_block {
+                    .right_slide_side {
+                        .index_slide_img_text {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 320px) {
