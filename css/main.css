@@ -362,6 +362,7 @@ button {
   transition: 0.55s transform;
 }
 .header .connection .first_phone {
+  display: flex;
   font-style: normal;
   font-weight: 500;
   font-size: 19px;
@@ -369,6 +370,12 @@ button {
   position: relative;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
+}
+.header .connection .fa-phone {
+  display: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
 }
 .header .connection .phones {
   z-index: 10;
@@ -2637,7 +2644,44 @@ button {
   }
 }
 @media (max-width: 480px) {
+  .header .connection .first_phone {
+    display: none;
+  }
+  .header .connection .fa-phone {
+    display: flex;
+  }
+  .header .work_time {
+    display: none;
+  }
+  .wrapper .index_slider .index_slider_wrapper .index_slide_block {
+    flex-wrap: wrap;
+  }
+  .wrapper .index_slider .index_slider_wrapper .index_slide_block .right_slide_side {
+    width: 100%;
+    margin-top: 20px;
+  }
   .wrapper .index_slider .index_slider_wrapper .index_slide_block .right_slide_side .index_slide_img_text {
     width: 80%;
+    left: 10%;
+  }
+  .wrapper .index_slider .index_slider_wrapper .index_slide_block .left_side_slide {
+    width: 100%;
+  }
+  .wrapper .index_about_block .stage {
+    width: 50%;
+  }
+  .wrapper .index_subscribe_block .subscribe_text form .email,
+  .wrapper .index_subscribe_block .subscribe_text form .name {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .wrapper .index_subscribe_block .subscribe_text form .input_fields {
+    flex-wrap: wrap;
+  }
+  .wrapper .index_blog_block {
+    margin-top: 75px;
+  }
+  .footer .footer_menu_block .footer_widget li {
+    width: 48%;
   }
 }

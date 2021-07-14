@@ -411,6 +411,7 @@ input, button {
         }
 
         .first_phone {
+            display: flex;
             font-style: normal;
             font-weight: 500;
             font-size: 19px;
@@ -418,6 +419,13 @@ input, button {
             position: relative;
             cursor: pointer;
             font-family: @roboto;
+        }
+
+        .fa-phone {
+            display: none;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
         }
 
         .phones {
@@ -3196,15 +3204,76 @@ input, button {
 }
 
 @media (max-width: 480px) {
+    .header {
+        .connection {
+            .first_phone {
+                display: none;
+            }
+
+            .fa-phone {
+                display: flex;
+            }
+        }
+
+        .work_time {
+            display: none;
+        }
+    }
+
     .wrapper {
         .index_slider {
             .index_slider_wrapper {
                 .index_slide_block {
+                    flex-wrap: wrap;
+
                     .right_slide_side {
+                        width: 100%;
+                        margin-top: 20px;
+
                         .index_slide_img_text {
                             width: 80%;
+                            left: 10%;
                         }
                     }
+
+                    .left_side_slide {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .index_about_block {
+            .stage {
+                width: 50%;
+            }
+        }
+
+        .index_subscribe_block {
+            .subscribe_text {
+                form {
+                    .email, .name {
+                        width: 100%;
+                        margin-bottom: 15px;
+                    }
+
+                    .input_fields {
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+
+        .index_blog_block {
+            margin-top: 75px;
+        }
+    }
+
+    .footer {
+        .footer_menu_block {
+            .footer_widget {
+                li {
+                    width: 48%;
                 }
             }
         }
