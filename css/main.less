@@ -3205,6 +3205,12 @@ input, button {
 
 @media (max-width: 480px) {
     .header {
+        padding: 20px 10px;
+
+        .hamburger {
+            width: 30px;
+        }
+
         .connection {
             .first_phone {
                 display: none;
@@ -3212,12 +3218,28 @@ input, button {
 
             .fa-phone {
                 display: flex;
+                font-size: 26px;
             }
         }
 
         .work_time {
             display: none;
         }
+
+        .cart_block {
+            margin-right: 10px;
+            
+            .user {
+                .user_img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    #navigation_menu {
+        margin-right: 0 !important;
     }
 
     .wrapper {

@@ -2644,14 +2644,31 @@ button {
   }
 }
 @media (max-width: 480px) {
+  .header {
+    padding: 20px 10px;
+  }
+  .header .hamburger {
+    width: 30px;
+  }
   .header .connection .first_phone {
     display: none;
   }
   .header .connection .fa-phone {
     display: flex;
+    font-size: 26px;
   }
   .header .work_time {
     display: none;
+  }
+  .header .cart_block {
+    margin-right: 10px;
+  }
+  .header .cart_block .user .user_img {
+    width: 30px;
+    height: 30px;
+  }
+  #navigation_menu {
+    margin-right: 0 !important;
   }
   .wrapper .index_slider .index_slider_wrapper .index_slide_block {
     flex-wrap: wrap;
