@@ -3228,7 +3228,7 @@ input, button {
 
         .cart_block {
             margin-right: 10px;
-            
+
             .user {
                 .user_img {
                     width: 30px;
@@ -3236,6 +3236,12 @@ input, button {
                 }
             }
         }
+    }
+
+    .item_prew {
+        width: 100%;
+        height: 500px;
+        margin-right: 0;
     }
 
     #navigation_menu {
@@ -3302,6 +3308,16 @@ input, button {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
+    .item_prew {
+        height: 380px;
+    }
 
+    .content {
+        .sorting {
+            .select {
+                max-width: 110px;
+            }
+        }
+    }
 }
